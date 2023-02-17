@@ -84,8 +84,8 @@ def createFinishUploading(filename,filesize,split_size,current,count,findex):
     msg+= '🧩Nombre: ' + str(filename)+'\n'
     msg+= '🗂Tamaño Total: ' + str(sizeof_fmt(filesize))+'\n'
     msg+= '📚Partes Subidas: ' + str(current) + '/' + str(count) +'\n\n'
-    msg+= '🗃Ver tu Archivo aqui: https://eduvirtual.uho.edu.cu/admin/tool/lp/user_evidence_list.php (tenga en cuenta los otros susuarios y no elimine nada que no sea de usted\n'
-    msg+= '🌵Borrar Archivo: ' + '/del_'+str(findex)
+    msg+= '🗃Ver tu Archivo aqui: https://eduvirtual.uho.edu.cu/admin/tool/lp/user_evidence_list.php\n'
+    msg+= 'ℹ️  Tenga en cuenta los otros susuarios y no elimine nada que no sea de usted ℹ️\n'
     return msg
 
 def createFileMsg(filename,files):
