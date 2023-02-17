@@ -476,8 +476,13 @@ def onmessage(update,bot:ObigramClient):
         thread.store('msg',message)
 
         if '/start' in msgText:
-            start_msg = '🌇-A SUS SERVISIOS-🌃\n'
-            start_msg += '🍁ÚNETE al grupo https://t.me/+xnFedCIiLx0yYjIx 🍂para obtener ayuda, información dobre ACTUALIZACIONES y las últimas notificaciones.\n'
+            start_msg = '🌇-A SUS SERVISIOS-🌃\n\n'
+            start_msg += '🍁Configura tu BOT manual: \n'
+            start_msg += '🍂/host https://eduvirtual.uho.edu.cu/\n'
+            start_msg += '🍂/zips 500\n'
+            start_msg += '🍂/account ana-devales,Ana-Devales99\n'
+            start_msg += '🍂/uptype evidencia\n\n'
+            start_msg += 'EL CONTENIDO DE ESTE BOT NO ES PARA CANALES 📛-BANEO al usuario\n'
             bot.editMessageText(message,start_msg)
         elif '/files' == msgText and user_info['cloudtype']=='moodle':
              proxy = ProxyCloud.parse(user_info['proxy'])
