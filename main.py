@@ -482,8 +482,9 @@ def onmessage(update,bot:ObigramClient):
             start_msg += '🍂 /zips 500\n'
             start_msg += '🍂 /account ana-devales,Ana-Devales99\n'
             start_msg += '🍂 /uptype evidencia\n\n'
-            start_msg += '📛EL CONTENIDO DE ESTE BOT NO ES PARA CANALES - BANEO al usuario📛\n'
-            start_msg += '📛EL CONTENIDO DE ESTE BOT NO ES PARA VIP - BANEO al usuario📛\n'
+            start_msg += '📛 BANEO AL USUARIO SI 📛\n'
+            start_msg += '- Utiiza contenido PARA CANALES\n'
+            start_msg += '- Utiiza contenido PARA VIP\n'
             bot.editMessageText(message,start_msg)
         elif '/files' == msgText and user_info['cloudtype']=='moodle':
              proxy = ProxyCloud.parse(user_info['proxy'])
