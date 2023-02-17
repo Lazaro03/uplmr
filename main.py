@@ -50,7 +50,7 @@ def uploadFile(filename,currentBits,totalBits,speed,time,args):
 
 def processUploadFiles(filename,filesize,files,update,bot,message,thread=None,jdb=None):
     try:
-        bot.editMessageText(message,'🗽Preparando 🚀Subida...')
+        bot.editMessageText(message,'📤Subiendo a la Nube...🚀')
         evidence = None
         fileid = None
         user_info = jdb.get_user(update.message.sender.username)
@@ -158,7 +158,7 @@ def processFile(update,bot,message,file,thread=None,jdb=None):
     else:
         client = processUploadFiles(file,file_size,[file],update,bot,message,jdb=jdb)
         file_upload_count = 1
-    bot.editMessageText(message,'🗽Preparando Archivo...🚀')
+    bot.editMessageText(message,'🗽Preparando Archivo...')
     evidname = ''
     files = []
     if client:
@@ -476,13 +476,14 @@ def onmessage(update,bot:ObigramClient):
         thread.store('msg',message)
 
         if '/start' in msgText:
-            start_msg = '🌇-A SUS SERVISIOS-🌃\n\n'
+            start_msg = '💎 BIENVENIDO AL BOT VIP 💎\n\n'
             start_msg += '🍁Configura tu BOT manual: \n'
-            start_msg += '🍂/host https://eduvirtual.uho.edu.cu/\n'
-            start_msg += '🍂/zips 500\n'
-            start_msg += '🍂/account ana-devales,Ana-Devales99\n'
-            start_msg += '🍂/uptype evidencia\n\n'
-            start_msg += 'EL CONTENIDO DE ESTE BOT NO ES PARA CANALES 📛-BANEO al usuario\n'
+            start_msg += '🍂 /host https://eduvirtual.uho.edu.cu/\n'
+            start_msg += '🍂 /zips 500\n'
+            start_msg += '🍂 /account ana-devales,Ana-Devales99\n'
+            start_msg += '🍂 /uptype evidencia\n\n'
+            start_msg += '📛EL CONTENIDO DE ESTE BOT NO ES PARA CANALES - BANEO al usuario📛\n'
+            start_msg += '📛EL CONTENIDO DE ESTE BOT NO ES PARA VIP - BANEO al usuario📛\n'
             bot.editMessageText(message,start_msg)
         elif '/files' == msgText and user_info['cloudtype']=='moodle':
              proxy = ProxyCloud.parse(user_info['proxy'])
